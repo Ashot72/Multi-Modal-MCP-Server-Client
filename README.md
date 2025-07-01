@@ -42,6 +42,8 @@ The Multi-Modal MCP server provides the following tools:
 - **🎥 Video Tool**  
   Uses the **YouTube Data API** to return video IDs, allowing video embedding in the UI.
 
+---
+
 ### 🛠️ Setup Instructions
 
 This project includes:
@@ -57,7 +59,7 @@ This project includes:
 git clone https://github.com/Ashot72/Multi-Modal-MCP-Server-Client
 
 # 2. Start the MCP Server
-cd backend/Multi-Modal-MCP-Server-Client
+cd Multi-Modal-MCP-Server-Client/backend
 
 # 2.1 Create a .env file from env.example.txt and include:
 # - OPENAI_API_KEY
@@ -71,7 +73,7 @@ npm install
 npm start
 
 # 3. Run the MCP Inspector (another terminal)
-cd backend/Multi-Modal-MCP-Server-Client
+cd Multi-Modal-MCP-Server-Client/backend
 npm run inspector
 
 # After running this command, you'll see a link like the following in your terminal:
@@ -82,7 +84,7 @@ npm run inspector
 # Click on it to open the MCP Inspector in your browser with the authentication token automatically filled in.
 
 # 4. Start the React MCP Client
-cd frontend/Multi-Modal-MCP-Server-Client
+cd Multi-Modal-MCP-Server-Client/frontend
 
 # 4.1 Install frontend dependencies
 npm install
