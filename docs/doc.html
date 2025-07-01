@@ -28,7 +28,8 @@ a:link, span.MsoHyperlink
 	{color:#0563C1;
 	text-decoration:underline;}
 .MsoChpDefault
-	{font-size:12.0pt;}
+	{font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
 .MsoPapDefault
 	{margin-bottom:8.0pt;
 	line-height:115%;}
@@ -68,7 +69,7 @@ target="_blank">https://github.com/Ashot72/Multi-Modal-MCP-Server-Client</a></sp
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>MCP – <i>Model
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>MCP - <i>Model
 Context Protocol </i>is an open standard that simplifies how large language
 models (LLMs) access and interact with external data, tools, and services.</span></p>
 
@@ -98,14 +99,14 @@ we utilize three clients:</span></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>MCP
-     Inspector</span></b><span style='font-size:14.0pt;line-height:115%'> – a
+     Inspector</span></b><span style='font-size:14.0pt;line-height:115%'> - a
      developer tool for testing and debugging MCP servers.</span></li>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>React
-     MCP client</span></b><span style='font-size:14.0pt;line-height:115%'> – a
+     MCP client</span></b><span style='font-size:14.0pt;line-height:115%'> - a
      custom-built frontend written in React.</span></li>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Cursor
-     AI Tool Editor</span></b><span style='font-size:14.0pt;line-height:115%'>
-     – integrates with MCP servers and allows invoking tools directly from the
+     AI Tool Editor</span></b><span style='font-size:14.0pt;line-height:115%'> -
+     integrates with MCP servers and allows invoking tools directly from the
      editor interface.</span></li>
 </ul>
 
@@ -116,19 +117,19 @@ MCP server</b> provides five tools:</span></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Audio
-     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – converts
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> - converts
      text into spoken audio using&nbsp;<b>Google Text-to-Speech</b>.</span></li>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Chart
-     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – generates
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> - generates
      JSON chart data from user prompts and renders it with&nbsp;<b>Chart.js</b>.</span></li>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Document
-     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – uses&nbsp;<b>Tavily
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> - uses&nbsp;<b>Tavily
      Search</b>&nbsp;to retrieve relevant documents and links.</span></li>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Image
-     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – leverages&nbsp;<b>DALL·E</b>&nbsp;to
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> - leverages&nbsp;<b>DALL·E</b>&nbsp;to
      create images based on natural language descriptions.</span></li>
  <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Video
-     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – uses
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> - uses
      the&nbsp;<b>YouTube Data API</b>&nbsp;to return video IDs, allowing video
      embedding in the UI.</span></li>
 </ul>
@@ -181,11 +182,11 @@ src="doc_files/image002.jpg"></p>
 we use SSE.</span></p>
 
 <p class=MsoNormal><i><span style='font-size:14.0pt;line-height:115%'>GET /see</span></i><span
-style='font-size:14.0pt;line-height:115%'> – establishes the SSE connection
+style='font-size:14.0pt;line-height:115%'> - establishes the SSE connection
 form the client to the server.</span></p>
 
 <p class=MsoNormal><i><span style='font-size:14.0pt;line-height:115%'>POST
-/messages</span></i><span style='font-size:14.0pt;line-height:115%'> – receives
+/messages</span></i><span style='font-size:14.0pt;line-height:115%'> - receives
 messages from the client (e.g., tool invocations, chat input)</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
@@ -264,7 +265,7 @@ src="doc_files/image009.jpg"></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>When we
 specify a prompt such as <b>&quot;Recent Microsoft Document AI&quot;</b>, it
-triggers the corresponding MCP server tool — in this case, the <b>Document Tool</b>.
+triggers the corresponding MCP server tool - in this case, the <b>Document Tool</b>.
 After that, it generates HTML </span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>code and
@@ -291,15 +292,15 @@ src="doc_files/image011.png"></p>
 file in the backend app specifies several keys:</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>TAVILY_API_KEY
-– required for the Document Tool to perform real-time searches. This key is
+- required for the Document Tool to perform real-time searches. This key is
 free.</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>YOUTUBE_DATA_API_KEY
-– required for the Video Tool to access the YouTube Data API, which allows
+- required for the Video Tool to access the YouTube Data API, which allows
 applications to interact with YouTube programmatically. This key is also free.</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>OPENAI_API_KEY
-– required for both the Image Tool and the Chart Tool. The key is not free.</span></p>
+- required for both the Image Tool and the Chart Tool. The key is not free.</span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
 
