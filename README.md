@@ -2,7 +2,7 @@
 
 MCP – Model Context Protocol is an open standard that simplifies how large language models (LLMs) access and interact with external data, tools, and services. It essentially acts as a universal interface, enabling AI applications to connect to various systems and resources in a standardized way. MCP utilizes a client-server model. Clients, embedded in LLMs, send requests to MCP servers, which handle the actual interaction with external systems. It simplifies the development of AI agents and workflows by providing a unified approach to connecting LLMs with various data sources, tools, and APIs.
 
-![MCP Server/Client](https://github.com/Ashot72/Multi-Modal-MCP-Server-Client/mcp.png)
+![MCP Server/Client](https://github.com/Ashot72/Multi-Modal-MCP-Server-Client/blob/main/mcp.png)
 
 This project connects to a Multi-Modal MCP server and demonstrates client-side integration with several powerful AI-driven tools.
 
