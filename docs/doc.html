@@ -1,0 +1,318 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-size:12.0pt;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:22.0pt;line-height:115%'>Multi-Modal MCP Server/Client with
+SSE Transport Layer</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:22.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Video Link: </span><a
+href="https://youtu.be/yP5qI0JJqNM" target="_blank"><span style='font-size:
+14.0pt;line-height:115%'>https://youtu.be/yP5qI0JJqNM</span></a></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>GitHub
+Repository: <a href="https://github.com/Ashot72/Multi-Modal-MCP-Server-Client"
+target="_blank">https://github.com/Ashot72/Multi-Modal-MCP-Server-Client</a></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>MCP – <i>Model
+Context Protocol </i>is an open standard that simplifies how large language
+models (LLMs) access and interact with external data, tools, and services.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>It
+essentially acts as a universal interface, enabling AI applications to connect
+to various systems and resources in a standardized way.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1130 height=620 id="Picture 1"
+src="doc_files/image001.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 1</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>MCP utilizes
+a client-server model. Clients, embedded in LLMs, send requests to MCP servers,
+which handle the actual interaction with external systems.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>MCP
+simplifies the development of AI agents and workflows by providing a unified
+approach to connecting LLMs with various data sources, tools, and APIs.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>In the app,
+we utilize three clients:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>MCP
+     Inspector</span></b><span style='font-size:14.0pt;line-height:115%'> – a
+     developer tool for testing and debugging MCP servers.</span></li>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>React
+     MCP client</span></b><span style='font-size:14.0pt;line-height:115%'> – a
+     custom-built frontend written in React.</span></li>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Cursor
+     AI Tool Editor</span></b><span style='font-size:14.0pt;line-height:115%'>
+     – integrates with MCP servers and allows invoking tools directly from the
+     editor interface.</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The <b>Multi-Modal
+MCP server</b> provides five tools:</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Audio
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – converts
+     text into spoken audio using&nbsp;<b>Google Text-to-Speech</b>.</span></li>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Chart
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – generates
+     JSON chart data from user prompts and renders it with&nbsp;<b>Chart.js</b>.</span></li>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Document
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – uses&nbsp;<b>Tavily
+     Search</b>&nbsp;to retrieve relevant documents and links.</span></li>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Image
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – leverages&nbsp;<b>DALL·E</b>&nbsp;to
+     create images based on natural language descriptions.</span></li>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Video
+     Tool</span></b><span style='font-size:14.0pt;line-height:115%'> – uses
+     the&nbsp;<b>YouTube Data API</b>&nbsp;to return video IDs, allowing video
+     embedding in the UI.</span></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The Model
+Context Protocol (MCP) defines three main transport types: <b>stdio</b>, <b>streamable
+HTTP</b>, and <b>SSE</b>.</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>stdio:</span></b></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>This
+transport uses standard input and output streams for communication.&nbsp;It's
+typically used for local integrations and command-line tools.&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Streamable
+     HTTP:</span></b></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>This
+transport uses HTTP POST requests for sending messages from the client to the
+server and optional Server-Sent Events (SSE) for streaming responses from the
+server to the client.&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>It's
+designed for both local and remote connections and is becoming the standard
+transport for remote MCP clients.&nbsp;</span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>SSE
+     (Server-Sent Events):</span></b></li>
+</ul>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>It uses a
+single HTTP endpoint for sending requests and a separate endpoint for receiving
+streamed responses.&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1410 height=562 id="Picture 3"
+src="doc_files/image002.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 2</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>In the app
+we use SSE.</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:115%'>GET /see</span></i><span
+style='font-size:14.0pt;line-height:115%'> – establishes the SSE connection
+form the client to the server.</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:115%'>POST
+/messages</span></i><span style='font-size:14.0pt;line-height:115%'> – receives
+messages from the client (e.g., tool invocations, chat input)</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1200 height=677 id="Picture 2"
+src="doc_files/image003.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 3</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>This is the
+MCP Inspector.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1280 height=581 id="Picture 4"
+src="doc_files/image004.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 4</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The first
+MCP client is the <b>MCP Inspector</b>, a developer tool for testing and
+debugging MCP servers.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1334 height=824 id="Picture 5"
+src="doc_files/image005.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 5</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The second
+client is the <b>React MCP client</b>, Aa custom-built frontend written in
+React.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1370 height=584 id="Picture 6"
+src="doc_files/image006.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 6</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The third
+client is the <b>Cursor AI Tool Editor</b>, which can act as an MCP client and
+invoke tools from an MCP server. What I aimed to do was generate the page and
+render tool responses with zero coding.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>I specified
+a prompt to generate the initial index.html file with starter code.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1333 height=690 id="Picture 7"
+src="doc_files/image007.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 7</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>I created a
+project-level Cursor rule with some instructions.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1186 height=537 id="Picture 8"
+src="doc_files/image008.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 8</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Connected it
+to our MCP server.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1393 height=750 id="Picture 10"
+src="doc_files/image009.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 9</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>When we
+specify a prompt such as <b>&quot;Recent Microsoft Document AI&quot;</b>, it
+triggers the corresponding MCP server tool — in this case, the <b>Document Tool</b>.
+After that, it generates HTML </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>code and
+inserts it into the source code based on the rule we specified.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1306 height=783 id="Picture 11"
+src="doc_files/image010.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 10</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>By calling
+all the tools, we will see index.html rendered with all tool outputs.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1095 height=601 id="Picture 12"
+src="doc_files/image011.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 11</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The .env
+file in the backend app specifies several keys:</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>TAVILY_API_KEY
+– required for the Document Tool to perform real-time searches. This key is
+free.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>YOUTUBE_DATA_API_KEY
+– required for the Video Tool to access the YouTube Data API, which allows
+applications to interact with YouTube programmatically. This key is also free.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>OPENAI_API_KEY
+– required for both the Image Tool and the Chart Tool. The key is not free.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

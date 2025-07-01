@@ -1,0 +1,22 @@
+# Environment files
+.env
+.env.*
+
+# Node modules
+node_modules/
+
+# Build output
+/dist/
+dist/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+.prettierrc 

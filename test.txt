@@ -1,0 +1,60 @@
+Cursor Initial Prompt
+
+Generate an index.html page that imports tailwind.css and chart.js if they do not already exist. The page should include a <div id="dynamic-content"> element, where tool content will be appended based on later prompts. The title of the file should be Multi Modal MCP, and the page should include a header with the same name and a blue background. Do not add any additional content—just the header. The width allocated for controls should be 710px. Do not generate JavaScript to add the content—insert it directly into the div element.
+
+
+
+Cursor Project Rule (multi-modal-mcp.mdc)
+
+*** When the videoTool is called, it returns a YouTube video ID. Please generate a YouTube URL based on the video ID and create an <iframe>:
+
+<iframe
+  width="700"
+  height="394"
+  src={`https://www.youtube.com/embed/VIDEO_ID`}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  title="YouTube Video"
+/>
+
+
+*** When the documentTool is called, please display the content in cards. Note that the content may include multiple items.
+
+*** When the chartTool is called, generate a pie chart structure based on the provided JSON structure
+
+*** When the audioTool is called, create an HTML5 <audio> player to play the generated audio file.
+
+*** When the imageTool is called, create an <img> tag with dimensions 512x512 and set the result as its source
+
+After each successful tool call, append the result to the <div id="dynamic-content"> element.
+
+
+
+Prompts
+
+1- YouTube video about Donald Trump's tariffs on Canada.
+
+2 - Recent Microsoft Documents on AI
+
+3 - Can you provide information about Donald Trump's 2024 election campaign, divided into at least five groups? We want to retrieve data.
+
+4 - Converting to audio
+Golden sun and skies so blue,
+Fields awake with morning dew.
+Laughter drifts on warm, bright air,
+Summer’s joy is everywhere.
+
+5 - Generate an image of Mount Ararat.
+
+
+
+Cursor mcp.json
+
+{
+  "mcpServers": {
+    "multi-modal-mcp": {
+      "transport": "sse",
+      "url": "http://localhost:3001/sse"
+    }
+  }
+}
