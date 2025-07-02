@@ -101,7 +101,7 @@ export function Index() {
     }
   };
 
-  function renderDescription(toolName: string, searchResult: string) {
+  function renderOutput(toolName: string, searchResult: string) {
     switch (toolName) {
       case "Chart Tool":
         const parsed = JSON.parse(searchResult);
@@ -291,7 +291,7 @@ export function Index() {
               key={index}
               className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200"
             >
-              {renderDescription(result.tool, result.searchResult)}
+              {renderOutput(result.tool, result.searchResult)}
             </div>
           ))}
         </div>
